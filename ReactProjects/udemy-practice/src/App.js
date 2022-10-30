@@ -24,19 +24,47 @@
 // 	);
 // }
 
-
 import "./App.css";
 import Home from "./components/home";
 import About from "./components/about";
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-{/* hello this is react- router- dom*/}
+import Header from "./components/header.js";
+import Error from "./components/error";
+{
+	/* hello this is react- router- dom*/
+}
 
 function App() {
 	return (
 		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/about" element={<About />} />
+			<Route
+				path="/"
+				element={
+					<>
+						<Header />
+						<Home />
+					</>
+				}
+			/>
+			<Route
+				path="/about"
+				element={
+					<>
+						<Header />
+						<About />
+					</>
+				}
+			/>
+
+			<Route
+				path="*"
+				element={
+					<>
+						<Error />
+					</>
+				}
+			/>
 		</Routes>
 	);
 }
