@@ -4,8 +4,21 @@
 .main-counter{
     background: pink;
     height: 100vh;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-counter button{
+    font-size: 30px;
+    padding: 10px 40px;
+    border-radius: 7px;
+}
+
+.main-counter h3{
+    font-size: 50px;
 }
 
 .main-header > ul{
