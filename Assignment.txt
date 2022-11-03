@@ -1,0 +1,9 @@
+tailwind
+state management
+fetch api
+axios
+
+pagination 
+search page
+room details
+home
