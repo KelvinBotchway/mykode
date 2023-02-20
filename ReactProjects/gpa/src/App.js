@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Welcome from './functions/welcome';
 
 function App() {
   return (
     <div className="App">
-     <h1>Welcome to React</h1>
+     <Welcome/>
     </div>
   );
 }
