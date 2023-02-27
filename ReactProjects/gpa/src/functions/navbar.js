@@ -1,4 +1,5 @@
 import React from "react";
+import Body from "./body";
 
 function Navbar() {
   return (
