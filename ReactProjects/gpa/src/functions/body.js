@@ -16,6 +16,13 @@ function Body() {
           <li>
             <div>
               <h3>Semester</h3>
+              <select>
+                <option value="Ford">Ford</option>
+                <option value="Volvo" selected>
+                  Volvo
+                </option>
+                <option value="Fiat">Fiat</option>
+              </select>
             </div>
           </li>
         </ul>
