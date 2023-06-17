@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e840df8e-2684-4e6e-a469-0ede93de0eaa" name="Changes" comment="CGPA separated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/organization.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/organization.sqlite" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/KAYCGPA.py" beforeDir="false" afterPath="$PROJECT_DIR$/KAYCGPA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/organization.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReactProjects/gpa/src/functions/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ReactProjects/gpa/src/functions/body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReactProjects/gpa/src/functions/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ReactProjects/gpa/src/functions/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReactProjects/udemy-practice/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ReactProjects/udemy-practice/src/index.js" afterDir="false" />
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +42,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -47,6 +56,22 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kelvi/Documents/mykode/Python&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kelvi\Desktop\ed" />
@@ -66,7 +91,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/10758246_AKINOLA_LAB3.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CGPA.py" />
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,7 +117,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CGPA.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GPA.py" />
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +143,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GPA.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KAYCGPA.py" />
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,7 +169,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KAYCGPA.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../10847459_ashilekpey_lab1/10847459_ashilekpey_lab1/ids.py" />
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,8 +208,11 @@
       <list>
         <item itemvalue="Python.10758246_AKINOLA_LAB3" />
         <item itemvalue="Python.KAYCGPA" />
-        <item itemvalue="Python.CGPA" />
         <item itemvalue="Python.GPA" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Python.CGPA" />
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
       </list>
     </recent_temporary>
   </component>
@@ -180,9 +224,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674945265480</updated>
+<<<<<<< HEAD
       <workItem from="1686048072595" duration="90000" />
       <workItem from="1686769029890" duration="1014000" />
       <workItem from="1686784518661" duration="361000" />
+=======
+      <workItem from="1677980123412" duration="184000" />
+      <workItem from="1678921073398" duration="5092000" />
+      <workItem from="1678995337621" duration="4264000" />
+      <workItem from="1679345745087" duration="778000" />
+      <workItem from="1679691275143" duration="866000" />
+      <workItem from="1679866141817" duration="437000" />
+      <workItem from="1680558930984" duration="125000" />
+      <workItem from="1680559358103" duration="1146000" />
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
     </task>
     <task id="LOCAL-00001" summary="Added some files">
       <created>1675146187755</created>
@@ -221,9 +276,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="CGPA separated" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Python$GPA.coverage" NAME="GPA Coverage Results" MODIFIED="1686769371947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$10758246_AKINOLA_LAB3.coverage" NAME="10758246_AKINOLA_LAB3 Coverage Results" MODIFIED="1686784852420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Python$KAYCGPA.coverage" NAME="KAYCGPA Coverage Results" MODIFIED="1686769899381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CGPA.coverage" NAME="CGPA Coverage Results" MODIFIED="1686769734103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/Python$GPA.coverage" NAME="GPA Coverage Results" MODIFIED="1680559900436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python$KAYCGPA.coverage" NAME="KAYCGPA Coverage Results" MODIFIED="1680559947671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python$CGPA.coverage" NAME="CGPA Coverage Results" MODIFIED="1680559040823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> 8440cc6cc637f220b8bd5cab0b4fc520df53ece1
   </component>
 </project>
