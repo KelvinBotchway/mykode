@@ -4,6 +4,7 @@ L12 = float(input('Enter 100 second semesters gpa '))
 L21 = float(input('Enter 200 first semesters gpa '))
 L22 = float(input('Enter 200 second semesters gpa '))
 L31 = float(input('Enter 300 first semesters gpa '))
+
 L32 = float(input('Enter 300 second semesters gpa '))
 
 cgpa = ((L11 + L12) / 2 + (L21 + L22) / 2 + (L31 + L32)) / 4
