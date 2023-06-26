@@ -1,10 +1,45 @@
-* {
-    
-}
-.addcourse {
-  border-radius: 5px;
+.gpa-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+  padding: 20px;
+  background-color: antiquewhite;
+  border-radius: 50px;
 }
 
+.course-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.add-remove-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.addcourse,
+.removecourse,
 .calculate {
+  margin-top: 10px;
   border-radius: 5px;
+  animation: button-animation 0.3s ease-in-out;
+}
+
+.calculate{
+    margin-left: 35%;
+}
+
+@keyframes button-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
