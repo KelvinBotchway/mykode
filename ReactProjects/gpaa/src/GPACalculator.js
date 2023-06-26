@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import "./style.css";
 
 const GPACalculator = () => {
   const [courses, setCourses] = useState([]);
@@ -88,10 +89,10 @@ const GPACalculator = () => {
             </Form.Group>
           </div>
         ))}
-        <Button variant="primary" onClick={addCourse}>
+        <Button className="addcourse" variant="primary" onClick={addCourse}>
           Add Course
         </Button>{" "}
-        <Button variant="success" onClick={calculateGPA}>
+        <Button className="calculate" variant="success" onClick={calculateGPA}>
           Calculate GPA
         </Button>
         {gpa !== 0 && <p>Your GPA is: {gpa.toFixed(2)}</p>}
