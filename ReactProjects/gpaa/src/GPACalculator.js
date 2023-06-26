@@ -105,7 +105,7 @@ const GPACalculator = () => {
             </Form.Group>
           </div>
         ))}
-        <div className="add-remove-buttons">
+        <div className="button-container">
           <Button className="addcourse" variant="primary" onClick={addCourse}>
             Add Course
           </Button>{" "}
@@ -119,11 +119,7 @@ const GPACalculator = () => {
             </Button>
           )}
         </div>
-        <Button
-          className="calculate"
-          variant="success"
-          onClick={calculateGPA}
-        >
+        <Button className="calculate" variant="success" onClick={calculateGPA}>
           Calculate GPA
         </Button>
         {gpa !== 0 && <p>Your GPA is: {gpa.toFixed(2)}</p>}

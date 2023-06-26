@@ -1,38 +1,28 @@
 .gpa-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0px;
   padding: 20px;
-  background-color: antiquewhite;
-  border-radius: 50px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .course-container {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 10px;
 }
 
-.add-remove-buttons {
+.button-container {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.addcourse,
-.removecourse,
 .calculate {
   margin-top: 10px;
-  border-radius: 5px;
-  animation: button-animation 0.3s ease-in-out;
+  width: 200px;
+  border-radius: 10px;
+  animation: buttonScale 0.2s ease-in-out;
 }
 
-.calculate{
-    margin-left: 35%;
-}
-
-@keyframes button-animation {
+@keyframes buttonScale {
   0% {
     transform: scale(1);
   }
