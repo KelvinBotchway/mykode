@@ -3,30 +3,40 @@ import { Container, Form, Button } from "react-bootstrap";
 import "./style.css";
 
 const GPACalculator = () => {
-  const [courses, setCourses] = useState([]);
-  const [gpa, setGPA] = useState(0);
+  const [semesters, setSemesters] = useState([]);
 
-  const handleCourseChange = (index, field, value) => {
-    const updatedCourses = [...courses];
-    updatedCourses[index][field] = value;
-    setCourses(updatedCourses);
+  const addSemester = () => {
+    const newSemester = {
+      courses: [{ grade: "", hours: 0 }],
+      gpa: 0,
+    };
+    setSemesters([...semesters, newSemester]);
   };
 
-  const addCourse = () => {
-    setCourses([...courses, { grade: "", hours: 0 }]);
+  const handleCourseChange = (semesterIndex, courseIndex, field, value) => {
+    const updatedSemesters = [...semesters];
+    updatedSemesters[semesterIndex].courses[courseIndex][field] = value;
+    setSemesters(updatedSemesters);
   };
 
-  const removeCourse = (index) => {
-    const updatedCourses = [...courses];
-    updatedCourses.splice(index, 1);
-    setCourses(updatedCourses);
+  const addCourse = (semesterIndex) => {
+    const updatedSemesters = [...semesters];
+    updatedSemesters[semesterIndex].courses.push({ grade: "", hours: 0 });
+    setSemesters(updatedSemesters);
   };
 
-  const calculateGPA = () => {
+  const removeCourse = (semesterIndex, courseIndex) => {
+    const updatedSemesters = [...semesters];
+    updatedSemesters[semesterIndex].courses.splice(courseIndex, 1);
+    setSemesters(updatedSemesters);
+  };
+
+  const calculateGPA = (semesterIndex) => {
+    const semester = semesters[semesterIndex];
     let totalPoints = 0;
     let totalHours = 0;
 
-    courses.forEach((course) => {
+    semester.courses.forEach((course) => {
       const grade = course.grade.toUpperCase();
       const hours = parseInt(course.hours, 10);
 
@@ -63,67 +73,102 @@ const GPACalculator = () => {
       totalHours += hours;
     });
 
-    setGPA(totalPoints / totalHours);
+    const gpa = totalPoints / totalHours;
+
+    const updatedSemesters = [...semesters];
+    updatedSemesters[semesterIndex].gpa = gpa;
+    setSemesters(updatedSemesters);
   };
 
   return (
     <Container className="gpa-body">
       <h1>GPA Calculator</h1>
-      <Form>
-        {courses.map((course, index) => (
-          <div className="course-container" key={index}>
-            <Form.Group>
-              <Form.Label>Grade for Course {index + 1}</Form.Label>
-              <Form.Control
-                as="select"
-                value={course.grade}
-                onChange={(e) =>
-                  handleCourseChange(index, "grade", e.target.value)
-                }
-              >
-                <option value="">Select Grade</option>
-                <option value="A">A</option>
-                <option value="B+">B+</option>
-                <option value="B">B</option>
-                <option value="C+">C+</option>
-                <option value="C">C</option>
-                <option value="D+">D+</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-              </Form.Control>
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Credit Hours for Course {index + 1}</Form.Label>
-              <Form.Control
-                as="input"
-                type="number"
-                value={course.hours}
-                onChange={(e) =>
-                  handleCourseChange(index, "hours", e.target.value)
-                }
-              />
-            </Form.Group>
-          </div>
-        ))}
-        <div className="button-container">
-          <Button className="addcourse" variant="primary" onClick={addCourse}>
-            Add Course
-          </Button>{" "}
-          {courses.length > 0 && (
+      {semesters.map((semester, semesterIndex) => (
+        <div key={semesterIndex} className="semester">
+          <h2>Semester {semesterIndex + 1}</h2>
+          <Form>
+            {semester.courses.map((course, courseIndex) => (
+              <div className="course-container" key={courseIndex}>
+                <Form.Group>
+                  <Form.Label>Grade for Course {courseIndex + 1}</Form.Label>
+                  <Form.Control
+                    as="select"
+                    value={course.grade}
+                    onChange={(e) =>
+                      handleCourseChange(
+                        semesterIndex,
+                        courseIndex,
+                        "grade",
+                        e.target.value
+                      )
+                    }
+                  >
+                    <option value="">Select Grade</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                  </Form.Control>
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label>
+                    Credit Hours for Course {courseIndex + 1}
+                  </Form.Label>
+                  <Form.Control
+                    as="input"
+                    type="number"
+                    value={course.hours}
+                    onChange={(e) =>
+                      handleCourseChange(
+                        semesterIndex,
+                        courseIndex,
+                        "hours",
+                        e.target.value
+                      )
+                    }
+                  />
+                </Form.Group>
+                {courseIndex > 0 && (
+                  <Button
+                    variant="danger"
+                    onClick={() => removeCourse(semesterIndex, courseIndex)}
+                    className="removecourse"
+                  >
+                    Remove Course
+                  </Button>
+                )}
+              </div>
+            ))}
             <Button
-              variant="danger"
-              onClick={() => removeCourse(courses.length - 1)}
-              className="removecourse"
+              className="addcourse"
+              variant="primary"
+              onClick={() => addCourse(semesterIndex)}
             >
-              Remove Course
+              Add Course
+            </Button>{" "}
+            <Button
+              className="calculate"
+              variant="success"
+              onClick={() => calculateGPA(semesterIndex)}
+            >
+              Calculate GPA
             </Button>
-          )}
+            {semester.gpa !== 0 && (
+              <p>
+                Your GPA for Semester {semesterIndex + 1} is:{" "}
+                {semester.gpa.toFixed(2)}
+              </p>
+            )}
+          </Form>
         </div>
-        <Button className="calculate" variant="success" onClick={calculateGPA}>
-          Calculate GPA
-        </Button>
-        {gpa !== 0 && <p>Your GPA is: {gpa.toFixed(2)}</p>}
-      </Form>
+      ))}
+      <Button className="addsemester" variant="primary" onClick={addSemester}>
+        Add Semester
+      </Button>
     </Container>
   );
 };
