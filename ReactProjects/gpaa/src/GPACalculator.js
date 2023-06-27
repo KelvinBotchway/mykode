@@ -4,11 +4,12 @@ import "./style.css";
 
 const GPACalculator = () => {
   const [semesters, setSemesters] = useState([]);
+  const [cgpa, setCGPA] = useState(null);
 
   const addSemester = () => {
     const newSemester = {
       courses: [{ grade: "", hours: 0 }],
-      gpa: 0,
+      gpa: null,
     };
     setSemesters([...semesters, newSemester]);
   };
@@ -28,6 +29,12 @@ const GPACalculator = () => {
   const removeCourse = (semesterIndex, courseIndex) => {
     const updatedSemesters = [...semesters];
     updatedSemesters[semesterIndex].courses.splice(courseIndex, 1);
+    setSemesters(updatedSemesters);
+  };
+
+  const removeSemester = (semesterIndex) => {
+    const updatedSemesters = [...semesters];
+    updatedSemesters.splice(semesterIndex, 1);
     setSemesters(updatedSemesters);
   };
 
@@ -80,6 +87,22 @@ const GPACalculator = () => {
     setSemesters(updatedSemesters);
   };
 
+  const calculateCGPA = () => {
+    let totalPoints = 0;
+    let totalHours = 0;
+
+    semesters.forEach((semester) => {
+      const semesterGPA = semester.gpa;
+      const semesterWeight = semester.courses.length;
+
+      totalPoints += semesterGPA * semesterWeight;
+      totalHours += semesterWeight;
+    });
+
+    const cgpa = totalPoints / totalHours;
+    setCGPA(cgpa);
+  };
+
   return (
     <Container className="gpa-body">
       <h1>GPA Calculator</h1>
@@ -103,7 +126,7 @@ const GPACalculator = () => {
                       )
                     }
                   >
-                    <option value="">Select Grade</option>
+                    <option value="">Select Grade...</option>
                     <option value="A">A</option>
                     <option value="B+">B+</option>
                     <option value="B">B</option>
@@ -112,6 +135,7 @@ const GPACalculator = () => {
                     <option value="D+">D+</option>
                     <option value="D">D</option>
                     <option value="E">E</option>
+                    <option value="F">F</option> {/* Added grade F */}
                   </Form.Control>
                 </Form.Group>
                 <Form.Group>
@@ -157,18 +181,46 @@ const GPACalculator = () => {
             >
               Calculate GPA
             </Button>
-            {semester.gpa !== 0 && (
+            {semester.gpa !== null && (
               <p>
                 Your GPA for Semester {semesterIndex + 1} is:{" "}
                 {semester.gpa.toFixed(2)}
               </p>
             )}
           </Form>
+          {semesterIndex > 0 && (
+            <Button
+              variant="danger"
+              onClick={() => removeSemester(semesterIndex)}
+              className="removesemester"
+            >
+              Remove Semester
+            </Button>
+          )}
         </div>
       ))}
       <Button className="addsemester" variant="primary" onClick={addSemester}>
         Add Semester
       </Button>
+
+      <Button
+        className="calculate-cgpa"
+        variant="success"
+        onClick={calculateCGPA}
+      >
+        Calculate CGPA
+      </Button>
+      {cgpa !== null && (
+        <div className="cgpa-meter">
+          <p>Your CGPA is: {cgpa.toFixed(2)}</p>
+          <div className="meter">
+            <div
+              className="meter-fill"
+              style={{ width: `${(cgpa / 4) * 100}%` }}
+            ></div>
+          </div>
+        </div>
+      )}
     </Container>
   );
 };

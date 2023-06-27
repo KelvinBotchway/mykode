@@ -1,4 +1,4 @@
-.gpa-body {
+/* .gpa-body {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -32,4 +32,67 @@
   100% {
     transform: scale(1);
   }
+} */
+
+/* style.css */
+
+.gpa-body {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.semester {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.course-container {
+  margin-bottom: 10px;
+}
+
+.removecourse,
+.addcourse {
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.removecourse:hover,
+.addcourse:hover {
+  background-color: #bbb;
+}
+
+.calculate {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.calculate:hover {
+  background-color: #006600;
+}
+
+.cgpa-meter {
+  margin-top: 20px;
+}
+
+.meter {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background-color: #52b788;
+  transition: width 0.5s ease-in-out;
 }
