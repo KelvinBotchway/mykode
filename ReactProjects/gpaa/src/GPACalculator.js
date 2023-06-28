@@ -26,9 +26,9 @@ const GPACalculator = () => {
     setSemesters(updatedSemesters);
   };
 
-  const removeCourse = (semesterIndex, courseIndex) => {
+  const removeCourse = (semesterIndex) => {
     const updatedSemesters = [...semesters];
-    updatedSemesters[semesterIndex].courses.splice(courseIndex, 1);
+    updatedSemesters[semesterIndex].courses.pop();
     setSemesters(updatedSemesters);
   };
 
@@ -72,6 +72,9 @@ const GPACalculator = () => {
         case "E":
           totalPoints += hours * 0.5;
           break;
+        case "F":
+          totalPoints += hours * 0;
+          break;
         default:
           totalPoints += hours * 0;
           break;
@@ -105,7 +108,7 @@ const GPACalculator = () => {
 
   return (
     <Container className="gpa-body">
-      <h1>GPA Calculator</h1>
+      <h1>Nothing Personal</h1>
       {semesters.map((semester, semesterIndex) => (
         <div key={semesterIndex} className="semester">
           <h2>Semester {semesterIndex + 1}</h2>
@@ -135,7 +138,7 @@ const GPACalculator = () => {
                     <option value="D+">D+</option>
                     <option value="D">D</option>
                     <option value="E">E</option>
-                    <option value="F">F</option> {/* Added grade F */}
+                    <option value="F">F</option>
                   </Form.Control>
                 </Form.Group>
                 <Form.Group>
@@ -156,15 +159,6 @@ const GPACalculator = () => {
                     }
                   />
                 </Form.Group>
-                {courseIndex > 0 && (
-                  <Button
-                    variant="danger"
-                    onClick={() => removeCourse(semesterIndex, courseIndex)}
-                    className="removecourse"
-                  >
-                    Remove Course
-                  </Button>
-                )}
               </div>
             ))}
             <Button
@@ -173,6 +167,14 @@ const GPACalculator = () => {
               onClick={() => addCourse(semesterIndex)}
             >
               Add Course
+            </Button>{" "}
+            <Button
+              variant="danger"
+              onClick={() => removeCourse(semesterIndex)}
+              className="removecourse"
+              disabled={semester.courses.length === 1}
+            >
+              Remove Course
             </Button>{" "}
             <Button
               className="calculate"
