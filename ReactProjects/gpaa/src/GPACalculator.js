@@ -177,7 +177,7 @@ const GPACalculator = () => {
               Remove Course
             </Button>{" "}
             <Button
-              className="calculate"
+              className="calculate bg-slate-900" 
               variant="success"
               onClick={() => calculateGPA(semesterIndex)}
             >
