@@ -1,11 +1,48 @@
+/* .gpa-body {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.course-container {
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calculate {
+  margin-top: 10px;
+  width: 200px;
+  border-radius: 10px;
+  animation: buttonScale 0.2s ease-in-out;
+}
+
+@keyframes buttonScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+
+/* style.css */
+
 .gpa-body {
   margin: 0 auto;
   width: 500px;
 }
 
 .semester {
-  border: 2px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid #ccc;
   padding: 10px;
 }
 
@@ -19,7 +56,6 @@
   color: #fff;
   border: none;
   padding: 10px;
-  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -33,12 +69,12 @@
   
   color: #fff;
   border: none;
-  border-radius: 10px;
   padding: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
+<<<<<<< HEAD
 .addsemester,
 .calculate-cgpa {
   border-radius: 5px;
@@ -60,6 +96,8 @@
   cursor: pointer;
 }
 
+=======
+>>>>>>> parent of e85e3fb (Added styling)
 .calculate:hover {
   background-color: #006600;
 }

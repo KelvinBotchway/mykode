@@ -26,9 +26,9 @@ const GPACalculator = () => {
     setSemesters(updatedSemesters);
   };
 
-  const removeCourse = (semesterIndex) => {
+  const removeCourse = (semesterIndex, courseIndex) => {
     const updatedSemesters = [...semesters];
-    updatedSemesters[semesterIndex].courses.pop();
+    updatedSemesters[semesterIndex].courses.splice(courseIndex, 1);
     setSemesters(updatedSemesters);
   };
 
@@ -72,9 +72,6 @@ const GPACalculator = () => {
         case "E":
           totalPoints += hours * 0.5;
           break;
-        case "F":
-          totalPoints += hours * 0;
-          break;
         default:
           totalPoints += hours * 0;
           break;
@@ -108,7 +105,7 @@ const GPACalculator = () => {
 
   return (
     <Container className="gpa-body">
-      <h1>Nothing Personal</h1>
+      <h1>GPA Calculator</h1>
       {semesters.map((semester, semesterIndex) => (
         <div key={semesterIndex} className="semester">
           <h2>Semester {semesterIndex + 1}</h2>
@@ -138,7 +135,7 @@ const GPACalculator = () => {
                     <option value="D+">D+</option>
                     <option value="D">D</option>
                     <option value="E">E</option>
-                    <option value="F">F</option>
+                    <option value="F">F</option> {/* Added grade F */}
                   </Form.Control>
                 </Form.Group>
                 <Form.Group>
@@ -159,6 +156,15 @@ const GPACalculator = () => {
                     }
                   />
                 </Form.Group>
+                {courseIndex > 0 && (
+                  <Button
+                    variant="danger"
+                    onClick={() => removeCourse(semesterIndex, courseIndex)}
+                    className="removecourse"
+                  >
+                    Remove Course
+                  </Button>
+                )}
               </div>
             ))}
             <Button
@@ -169,6 +175,7 @@ const GPACalculator = () => {
               Add Course
             </Button>{" "}
             <Button
+<<<<<<< HEAD
               variant="danger"
               onClick={() => removeCourse(semesterIndex)}
               className="removecourse"
@@ -178,6 +185,9 @@ const GPACalculator = () => {
             </Button>{" "}
             <Button
               className="calculate bg-slate-900" 
+=======
+              className="calculate"
+>>>>>>> parent of e85e3fb (Added styling)
               variant="success"
               onClick={() => calculateGPA(semesterIndex)}
             >
