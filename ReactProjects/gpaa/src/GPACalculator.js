@@ -26,9 +26,9 @@ const GPACalculator = () => {
     setSemesters(updatedSemesters);
   };
 
-  const removeCourse = (semesterIndex, courseIndex) => {
+  const removeCourse = (semesterIndex) => {
     const updatedSemesters = [...semesters];
-    updatedSemesters[semesterIndex].courses.splice(courseIndex, 1);
+    updatedSemesters[semesterIndex].courses.pop();
     setSemesters(updatedSemesters);
   };
 
@@ -71,6 +71,9 @@ const GPACalculator = () => {
           break;
         case "E":
           totalPoints += hours * 0.5;
+          break;
+        case "F":
+          totalPoints += hours * 0;
           break;
         default:
           totalPoints += hours * 0;
@@ -135,7 +138,7 @@ const GPACalculator = () => {
                     <option value="D+">D+</option>
                     <option value="D">D</option>
                     <option value="E">E</option>
-                    <option value="F">F</option> {/* Added grade F */}
+                    <option value="F">F</option>
                   </Form.Control>
                 </Form.Group>
                 <Form.Group>
@@ -156,15 +159,6 @@ const GPACalculator = () => {
                     }
                   />
                 </Form.Group>
-                {courseIndex > 0 && (
-                  <Button
-                    variant="danger"
-                    onClick={() => removeCourse(semesterIndex, courseIndex)}
-                    className="removecourse"
-                  >
-                    Remove Course
-                  </Button>
-                )}
               </div>
             ))}
             <Button
@@ -175,7 +169,6 @@ const GPACalculator = () => {
               Add Course
             </Button>{" "}
             <Button
-<<<<<<< HEAD
               variant="danger"
               onClick={() => removeCourse(semesterIndex)}
               className="removecourse"
@@ -184,10 +177,7 @@ const GPACalculator = () => {
               Remove Course
             </Button>{" "}
             <Button
-              className="calculate bg-slate-900" 
-=======
               className="calculate"
->>>>>>> parent of e85e3fb (Added styling)
               variant="success"
               onClick={() => calculateGPA(semesterIndex)}
             >

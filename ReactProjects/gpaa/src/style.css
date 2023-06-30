@@ -1,48 +1,11 @@
-/* .gpa-body {
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.course-container {
-  margin-bottom: 10px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.calculate {
-  margin-top: 10px;
-  width: 200px;
-  border-radius: 10px;
-  animation: buttonScale 0.2s ease-in-out;
-}
-
-@keyframes buttonScale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
-
-/* style.css */
-
 .gpa-body {
   margin: 0 auto;
   width: 500px;
 }
 
 .semester {
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
+  border-radius: 10px;
   padding: 10px;
 }
 
@@ -56,6 +19,7 @@
   color: #fff;
   border: none;
   padding: 10px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -66,23 +30,24 @@
 }
 
 .calculate {
-  
+  background-color: #008000;
   color: #fff;
   border: none;
+  border-radius: 10px;
   padding: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
-<<<<<<< HEAD
 .addsemester,
 .calculate-cgpa {
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px;
   margin: 3px;
   cursor: pointer;
-  border: 1px solid #ccc ;
 }
+
+
 
 .removesemester {
   border-radius: 10px;
@@ -90,14 +55,12 @@
   margin-top: 3px;
 }
 
-.removesemester:hover {
+.removesemester:hover{
   background-color: red;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
-=======
->>>>>>> parent of e85e3fb (Added styling)
 .calculate:hover {
   background-color: #006600;
 }
@@ -120,4 +83,3 @@
   background-color: #52b788;
   transition: width 0.5s ease-in-out;
 }
-
