@@ -41,16 +41,15 @@
 
 .addsemester,
 .calculate-cgpa {
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 5px;
   margin: 3px;
   cursor: pointer;
 }
 
 
-
 .removesemester {
-  border-radius: 10px;
+  border-radius: 7px;
   padding: 5px;
   margin-top: 3px;
 }
@@ -83,3 +82,26 @@
   background-color: #52b788;
   transition: width 0.5s ease-in-out;
 }
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+  background-color: #ccc;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.guide {
+  margin-right: auto;
+}
+

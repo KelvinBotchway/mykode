@@ -1,15 +1,15 @@
 import React from "react";
-
+import "./style.css";
 
 function Navbar() {
   return (
     <>
-      <nav className=" bg-slate-900 p-5 text-white flex flex-row  justify-between">
+      <nav className="nav">
         <div>
-          <a className="Nav-left flex flex-row items-end">GPA CALCULATOR</a>
+          <a className="text-pa">GPA CALCULATOR</a>
         </div>
-        <ul className="flex flex-row items-center">
-          <li className="px-8">Guide</li>
+        <ul className="nav-items">
+          <li className="guide">Guide</li>
           <li>Social</li>
         </ul>
       </nav>
