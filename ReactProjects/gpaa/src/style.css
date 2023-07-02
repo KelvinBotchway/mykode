@@ -41,10 +41,25 @@
 
 .addsemester,
 .calculate-cgpa {
-  border-radius: 5px;
-  padding: 5px;
-  margin: 3px;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 3px 3px;
+}
+
+.calculate-cgpa {
+  background-color: #000000be;
+}
+
+.addsemester:hover,
+.calculate-cgpa:hover {
+  background-color: #bbb;
+  transform: scale(1.1); /* Add scaling animation on hover */
+  background-color: #008000;
 }
 
 
