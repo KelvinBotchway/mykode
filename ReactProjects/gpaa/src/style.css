@@ -11,7 +11,7 @@
 
 .course-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
 }
