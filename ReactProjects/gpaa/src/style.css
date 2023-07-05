@@ -24,10 +24,11 @@
 
 .form-label {
   margin-bottom: 5px;
+  margin-right: 30px;
 }
 
 .form-control {
-  margin-bottom: 0;
+  margin-bottom: 7px;
   padding: 5px 5px;
   border-radius: 7px;
   border: solid 2px #000000be;
@@ -42,6 +43,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin: 0px 3px;
 }
 
 .removecourse:hover,
@@ -57,6 +59,7 @@
   padding: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin: 0px 3px;
 }
 
 .addsemester,
@@ -81,6 +84,15 @@
   transform: scale(1.1); /* Add scaling animation on hover */
   background-color: #008000;
 }
+
+.add-remove{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.add-remove 
 
 .removesemester {
   border-radius: 7px;
@@ -136,4 +148,16 @@
 
 .guide {
   margin-right: auto;
+}
+
+.text-pa:hover{
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 40px #fff,
+               0 0 80px #fff,
+               0 0 120px #fff,
+               0 0 160px #fff;
+
 }

@@ -161,6 +161,7 @@ const GPACalculator = () => {
                 </Form.Group>
               </div>
             ))}
+            <div className="add-remove">
             <Button
               className="addcourse"
               variant="primary"
@@ -183,6 +184,7 @@ const GPACalculator = () => {
             >
               Calculate GPA
             </Button>
+            </div>
             {semester.gpa !== null && (
               <p>
                 Your GPA for Semester {semesterIndex + 1} is:{" "}
