@@ -136,6 +136,7 @@
   align-items: center;
   padding: 0px 20px 0px 20px;
   background-color: #ccc;
+  font-weight: bolder;
 }
 
 .nav-items {
@@ -152,6 +153,7 @@
 
 .text-pa:hover{
   color: #fff;
+  cursor: pointer;
   transition: 0.5s;
   text-shadow: 0 0 10px #fff,
                0 0 20px #fff,
