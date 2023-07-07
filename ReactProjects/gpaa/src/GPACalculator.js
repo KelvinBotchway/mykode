@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import "./style.css";
 
+
 const GPACalculator = () => {
   const [semesters, setSemesters] = useState([]);
   const [cgpa, setCGPA] = useState(null);

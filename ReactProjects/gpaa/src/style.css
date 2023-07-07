@@ -1,8 +1,13 @@
 .gpa-body {
   margin: 0 auto;
   width: 500px;
-  background-image: url("https://stock.adobe.com/search?k=graduation+background");
 }
+
+
+/* .entire-body{
+  background-image: url(./background.jpg);
+  background-size: cover
+} */
 
 .semester {
   border: 2px solid #ccc;
