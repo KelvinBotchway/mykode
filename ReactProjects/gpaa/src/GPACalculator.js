@@ -108,7 +108,7 @@ const GPACalculator = () => {
 
   return (
     <Container className="gpa-body">
-      <h1 className="gpa-text">GPA Calculator</h1>
+      <div className="gpa-middle"><h1 className="gpa-text">GPA Calculator</h1></div>
       {semesters.map((semester, semesterIndex) => (
         <div key={semesterIndex} className="semester">
           <h2>Semester {semesterIndex + 1}</h2>
