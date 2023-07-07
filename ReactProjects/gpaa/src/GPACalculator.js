@@ -193,6 +193,7 @@ const GPACalculator = () => {
             )}
           </Form>
           {semesterIndex > 0 && (
+            <div className="removediv">
             <Button
               variant="danger"
               onClick={() => removeSemester(semesterIndex)}
@@ -200,9 +201,11 @@ const GPACalculator = () => {
             >
               Remove Semester
             </Button>
+            </div>
           )}
         </div>
       ))}
+      <div className="addsem">
       <Button className="addsemester" variant="primary" onClick={addSemester}>
         Add Semester
       </Button>
@@ -214,6 +217,7 @@ const GPACalculator = () => {
       >
         Calculate CGPA
       </Button>
+      </div>
       {cgpa !== null && (
         <div className="cgpa-meter">
           <p>Your CGPA is: {cgpa.toFixed(2)}</p>

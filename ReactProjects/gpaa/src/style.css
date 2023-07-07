@@ -92,18 +92,30 @@
   align-content: center;
 }
 
-.add-remove 
 
 .removesemester {
   border-radius: 7px;
   padding: 5px;
-  margin-top: 3px;
+  margin-top: 5px;
+}
+
+.removediv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .removesemester:hover {
-  background-color: red;
-  transition: all 0.3s ease-in-out;
+  transition: 1s;
+  transform: scale(0.9); /* Add scaling animation on hover */
+  background-color: #f74747;
   cursor: pointer;
+}
+
+.addsem{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .calculate:hover {
