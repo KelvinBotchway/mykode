@@ -9,9 +9,10 @@ def startDownload():
         ytObject = YouTube(ytLink)
         video = ytObject.streams.get_highest_resolution()
         video.download()
+        finishLabel.configure(text="Downloaded!")
     except:
-        print("Youtube Link is invalid")
-    print("Download Complete")
+        finishLabel.configure(text="Download Error",text_color="red")
+
 
 
 customtkinter.set_appearance_mode("System")
@@ -31,6 +32,8 @@ url_var = tkinter.StringVar()
 link = customtkinter.CTkEntry(app, width=350, height=40, textvariable=url_var)
 link.pack()
 
+finishLabel = customtkinter.CTkLabel(app, text="")
+finishLabel.pack()
 
 # Download button
 download = customtkinter.CTkButton(app, text="Download", command=startDownload)
