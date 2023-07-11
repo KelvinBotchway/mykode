@@ -7,10 +7,11 @@ def startDownload():
     try:
         ytLink = link.get()
         ytObject = YouTube(ytLink)
-        video = ytObject.streams.get_highest_resolution().download()
-        print("Download Complete")
+        video = ytObject.streams.get_highest_resolution()
+        video.download()
     except:
         print("Youtube Link is invalid")
+    print("Download Complete")
 
 
 customtkinter.set_appearance_mode("System")
